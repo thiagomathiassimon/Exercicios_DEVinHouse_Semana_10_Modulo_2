@@ -27,14 +27,15 @@ public class main {
         Medico medico = new Medico();
         medico.setNome("Doutor Ziraldo");
         medico.setCrm("969/SP");
-        medico.setCodigo(5L);
+      medico.setCodigo(5L);
 
 //        medicoDAO.alterar(medico);
 //
 //        System.out.println(medico);
 
+//medicoDAO.deletar(medico);
 
-//        medicoDAO.inserir(medico);
+   //     medicoDAO.inserir(medico);
 //
 //        System.out.println(medico);
 
@@ -45,17 +46,22 @@ public class main {
         paciente.setEmail("alberto@gmail.com");
         paciente.setTelefone("888");
 
-//        paciente.setCodigo(1L);
+      paciente.setCodigo(2L);
 //
 //        pacienteDAO.alterar(paciente);
 
-//
-//        pacienteDAO.inserir(paciente);
+
+       // pacienteDAO.deletar(paciente);
+
+      //  pacienteDAO.inserir(paciente);
 //
 //        System.out.println(paciente);
 
         paciente.setCodigo(1L);
-        medico.setCodigo(1L);
+
+       // medicoDAO.deletar(medico);
+
+        //medico.setCodigo(1L);
 
         AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
         Atendimento atendimento = new Atendimento();
@@ -66,11 +72,13 @@ public class main {
         atendimento.setValor(250.00);
         atendimento.setData(Timestamp.from(Instant.now()));
 
-        atendimento.setCodigo(3L);
+        atendimento.setCodigo(2L);
 
-        atendimentoDAO.alterar(atendimento);
+      //  atendimentoDAO.alterar(atendimento);
 
         //atendimentoDAO.inserir(atendimento);
+
+        atendimentoDAO.deletar(atendimento);
 
         System.out.println(atendimento);
 
