@@ -25,7 +25,18 @@ public abstract class DAO<T> implements IDao<T> {
 
     @Override
     public void alterar(T objeto) {
-
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            System.out.println(objeto);
+            entityManager.merge(objeto);
+            entityManager.getTransaction().commit();
+        } catch (Exception e){
+            e.printStackTrace();
+            entityManager.getTransaction().rollback();
+        } finally {
+            entityManager.close();
+        }
     }
 
     @Override
