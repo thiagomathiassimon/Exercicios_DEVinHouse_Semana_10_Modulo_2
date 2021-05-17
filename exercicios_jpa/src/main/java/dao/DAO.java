@@ -40,7 +40,7 @@ public abstract class DAO<T> implements IDao<T> {
     }
 
     @Override
-    public abstract void deletar(Long codigo);
+    public abstract void deletar(T objeto);
 
     @Override
     public abstract List<T> listar(T objeto);

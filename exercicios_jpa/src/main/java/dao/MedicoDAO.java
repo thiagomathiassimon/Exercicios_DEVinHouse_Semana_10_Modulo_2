@@ -2,12 +2,27 @@ package dao;
 
 import model.Medico;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
-public class MedicoDAO extends DAO<Medico> {
-    @Override
-    public void deletar(Long codigo) {
+import static model.JPAUtil.entityManagerFactory;
 
+public class MedicoDAO extends DAO<Medico> {
+
+    @Override
+    public void deletar(Medico objeto) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            objeto = entityManager.find(Medico.class, objeto.getCodigo());
+            entityManager.remove(objeto);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            entityManager.getTransaction().rollback();
+        } finally {
+            entityManager.close();
+        }
     }
 
     @Override

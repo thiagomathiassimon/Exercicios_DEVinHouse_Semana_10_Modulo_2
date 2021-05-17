@@ -8,7 +8,7 @@ public interface IDao<T> {
 
     public void alterar(T objeto);
 
-    public void deletar(Long codigo);
+    public void deletar(T objeto);
 
     public List<T> listar(T objeto);
 }
