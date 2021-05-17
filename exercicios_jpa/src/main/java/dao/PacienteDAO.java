@@ -4,6 +4,7 @@ import model.Atendimento;
 import model.Paciente;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 import static model.JPAUtil.entityManagerFactory;
@@ -29,4 +30,20 @@ public class PacienteDAO extends DAO<Paciente> {
     public List<Paciente> listar(Paciente objeto) {
         return null;
     }
+
+    public List<Paciente> litarPacientesPorAnoDeNascimento(int anoDeNascimento){
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<Paciente> list = null;
+        try {
+            TypedQuery<Paciente> query = entityManager.createQuery(
+                    "FROM Paciente p WHERE EXTRACT(YEAR FROM p.nascimento) = ?1" , Paciente.class);
+            list = query.setParameter(1, anoDeNascimento).getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+        return list;
+    }
+
 }

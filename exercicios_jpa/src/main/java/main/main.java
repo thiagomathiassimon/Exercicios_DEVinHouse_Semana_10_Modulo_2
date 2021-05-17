@@ -16,6 +16,8 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.List;
+
 import static model.JPAUtil.entityManagerFactory;
 
 public class main {
@@ -42,18 +44,18 @@ public class main {
         PacienteDAO pacienteDAO = new PacienteDAO();
         Paciente paciente = new Paciente();
         paciente.setNome("Alberto");
-        paciente.setNascimento(Date.valueOf("1960-04-30"));
+        paciente.setNascimento(Date.valueOf("1985-04-30"));
         paciente.setEmail("alberto@gmail.com");
         paciente.setTelefone("888");
 
-      paciente.setCodigo(2L);
+      //paciente.setCodigo(2L);
 //
 //        pacienteDAO.alterar(paciente);
 
 
        // pacienteDAO.deletar(paciente);
 
-      //  pacienteDAO.inserir(paciente);
+     //   pacienteDAO.inserir(paciente);
 //
 //        System.out.println(paciente);
 
@@ -78,10 +80,13 @@ public class main {
 
         //atendimentoDAO.inserir(atendimento);
 
-        atendimentoDAO.deletar(atendimento);
+ //       atendimentoDAO.deletar(atendimento);
 
         System.out.println(atendimento);
 
+        List<Paciente> list = pacienteDAO.litarPacientesPorAnoDeNascimento(1990);
+
+        list.forEach(System.out::println);
 
     }
 
