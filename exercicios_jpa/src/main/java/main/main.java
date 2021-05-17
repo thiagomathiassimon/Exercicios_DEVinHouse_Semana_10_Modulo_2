@@ -3,6 +3,7 @@ package main;
 import dao.AtendimentoDAO;
 import dao.MedicoDAO;
 import dao.PacienteDAO;
+import dto.PacientesPorMesDeNascimentoDTO;
 import model.Atendimento;
 import model.Medico;
 import model.Paciente;
@@ -82,9 +83,11 @@ public class main {
 
  //       atendimentoDAO.deletar(atendimento);
 
-        System.out.println(atendimento);
+     //   System.out.println(atendimento);
 
-        List<Paciente> list = pacienteDAO.litarPacientesPorAnoDeNascimento(1990);
+       // List<Paciente> list = pacienteDAO.litarPacientesPorAnoDeNascimento(1990);
+
+        List<PacientesPorMesDeNascimentoDTO> list = pacienteDAO.listarPacientesAgrupadosPorMesDeNascimento();
 
         list.forEach(System.out::println);
 

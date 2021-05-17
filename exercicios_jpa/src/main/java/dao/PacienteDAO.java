@@ -1,5 +1,6 @@
 package dao;
 
+import dto.PacientesPorMesDeNascimentoDTO;
 import model.Atendimento;
 import model.Paciente;
 
@@ -38,6 +39,20 @@ public class PacienteDAO extends DAO<Paciente> {
             TypedQuery<Paciente> query = entityManager.createQuery(
                     "FROM Paciente p WHERE EXTRACT(YEAR FROM p.nascimento) = ?1" , Paciente.class);
             list = query.setParameter(1, anoDeNascimento).getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+        return list;
+    }
+
+    public List<PacientesPorMesDeNascimentoDTO> listarPacientesAgrupadosPorMesDeNascimento(){
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<PacientesPorMesDeNascimentoDTO> list = null;
+        try {
+            list = entityManager.createQuery("SELECT new dto.PacientesPorMesDeNascimentoDTO(EXTRACT(MONTH FROM p.nascimento), COUNT(*))\n" +
+                    "\tFROM Paciente p GROUP BY EXTRACT(MONTH FROM p.nascimento)").getResultList();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
