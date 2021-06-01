@@ -1,7 +1,7 @@
 package dao;
 
+import dto.PacienteComMaiorEMenorIdadeDTO;
 import dto.PacientesPorMesDeNascimentoDTO;
-import model.Atendimento;
 import model.Paciente;
 
 import javax.persistence.EntityManager;
@@ -58,6 +58,22 @@ public class PacienteDAO extends DAO<Paciente> {
         } finally {
             entityManager.close();
         }
+        return list;
+    }
+
+    public List<PacienteComMaiorEMenorIdadeDTO> buscarPacienteComMaiorEMenorIdade(){
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<PacienteComMaiorEMenorIdadeDTO> list = null;
+        try {
+            list = entityManager.createQuery("SELECT new dto.PacienteComMaiorEMenorIdadeDTO(p.nome) FROM Paciente p \n" +
+                    "\tWHERE AGE(p.nascimento) = (SELECT MAX(AGE(p.nascimento)) FROM Paciente p) \n" +
+                    "\tOR AGE(p.nascimento) = (SELECT MIN(AGE(p.nascimento)) FROM Paciente p)").getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+        System.out.println(list);
         return list;
     }
 

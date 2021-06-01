@@ -1,0 +1,27 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡
+i
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(Çµí‘8Ýðµ¼œ/
+X
+java:S1854="BRemove this useless assignment to local variable "atendimentoDAO".(“„·þ
+S
+java:S1854"=Remove this useless assignment to local variable "medicoDAO".(ºûþ¾
+P	java:S125"<This block of commented-out lines of code should be removed.(ÿ˜‰@
+Q	java:S125"<This block of commented-out lines of code should be removed.(üìß
+Q	java:S125!"<This block of commented-out lines of code should be removed.(¯ÈŽ 
+V	java:S125,"<This block of commented-out lines of code should be removed.(î§˜âùÿÿÿÿ
+V	java:S1251"<This block of commented-out lines of code should be removed.(üæ§ýÿÿÿÿ
+Q	java:S1253"<This block of commented-out lines of code should be removed.(Õüý•
+Q	java:S1259"<This block of commented-out lines of code should be removed.(üìß
+V	java:S125;"<This block of commented-out lines of code should be removed.(¡À’Íùÿÿÿÿ
+Q	java:S125H"<This block of commented-out lines of code should be removed.(ü ñå
+Q	java:S125J"<This block of commented-out lines of code should be removed.(™ñß‘
+V	java:S125L"<This block of commented-out lines of code should be removed.(¸±¿•ýÿÿÿÿ
+V	java:S125N"<This block of commented-out lines of code should be removed.(Ëˆª¾ùÿÿÿÿ
+Q	java:S125P"<This block of commented-out lines of code should be removed.(­Í½Ä
+V	java:S125R"<This block of commented-out lines of code should be removed.(û©ËÂýÿÿÿÿ
+S	java:S106V"9Replace this use of System.out or System.err by a logger.(­¸¤Êúÿÿÿÿ
+D
+java:S1481".Remove this unused "medicoDAO" local variable.(ºûþ¾
+I
+java:S1481="3Remove this unused "atendimentoDAO" local variable.(“„·þ
