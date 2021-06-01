@@ -1,6 +1,7 @@
 package dao;
 
 import dto.PacienteComMaiorEMenorIdadeDTO;
+import dto.PacienteESeuMedicoDTO;
 import dto.PacientesPorMesDeNascimentoDTO;
 import model.Paciente;
 
@@ -68,6 +69,22 @@ public class PacienteDAO extends DAO<Paciente> {
             list = entityManager.createQuery("SELECT new dto.PacienteComMaiorEMenorIdadeDTO(p.nome) FROM Paciente p \n" +
                     "\tWHERE AGE(p.nascimento) = (SELECT MAX(AGE(p.nascimento)) FROM Paciente p) \n" +
                     "\tOR AGE(p.nascimento) = (SELECT MIN(AGE(p.nascimento)) FROM Paciente p)").getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+        System.out.println(list);
+        return list;
+    }
+
+   public List<PacienteESeuMedicoDTO> buscarPacientesEOsMedicosAssociadosAEles(){
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<PacienteESeuMedicoDTO> list = null;
+        try {
+            list = entityManager.createQuery("SELECT new dto.PacienteESeuMedicoDTO(p.nome, m.nome) FROM Paciente p INNER JOIN Atendimento a \n" +
+                    "\tON p.codigo = a.paciente INNER JOIN \n" +
+                    "\tMedico m ON m.codigo = a.medico ORDER BY p.nome ASC").getResultList();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
