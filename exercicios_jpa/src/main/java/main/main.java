@@ -3,23 +3,16 @@ package main;
 import dao.AtendimentoDAO;
 import dao.MedicoDAO;
 import dao.PacienteDAO;
-import dto.PacientesPorMesDeNascimentoDTO;
+import dto.PacienteComMaiorEMenorIdadeDTO;
 import model.Atendimento;
 import model.Medico;
 import model.Paciente;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
 import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
-
-import static model.JPAUtil.entityManagerFactory;
 
 public class main {
 
@@ -30,7 +23,7 @@ public class main {
         Medico medico = new Medico();
         medico.setNome("Doutor Ziraldo");
         medico.setCrm("969/SP");
-      medico.setCodigo(5L);
+        medico.setCodigo(5L);
 
 //        medicoDAO.alterar(medico);
 //
@@ -38,7 +31,7 @@ public class main {
 
 //medicoDAO.deletar(medico);
 
-   //     medicoDAO.inserir(medico);
+        //     medicoDAO.inserir(medico);
 //
 //        System.out.println(medico);
 
@@ -49,20 +42,20 @@ public class main {
         paciente.setEmail("alberto@gmail.com");
         paciente.setTelefone("888");
 
-      //paciente.setCodigo(2L);
+        //paciente.setCodigo(2L);
 //
 //        pacienteDAO.alterar(paciente);
 
 
-       // pacienteDAO.deletar(paciente);
+        // pacienteDAO.deletar(paciente);
 
-     //   pacienteDAO.inserir(paciente);
+        //   pacienteDAO.inserir(paciente);
 //
 //        System.out.println(paciente);
 
         paciente.setCodigo(1L);
 
-       // medicoDAO.deletar(medico);
+        // medicoDAO.deletar(medico);
 
         //medico.setCodigo(1L);
 
@@ -77,19 +70,23 @@ public class main {
 
         atendimento.setCodigo(2L);
 
-      //  atendimentoDAO.alterar(atendimento);
+        //  atendimentoDAO.alterar(atendimento);
 
         //atendimentoDAO.inserir(atendimento);
 
- //       atendimentoDAO.deletar(atendimento);
+        //       atendimentoDAO.deletar(atendimento);
 
-     //   System.out.println(atendimento);
+        //   System.out.println(atendimento);
 
-       // List<Paciente> list = pacienteDAO.litarPacientesPorAnoDeNascimento(1990);
+        // List<Paciente> list = pacienteDAO.litarPacientesPorAnoDeNascimento(1990);
 
-        List<PacientesPorMesDeNascimentoDTO> list = pacienteDAO.listarPacientesAgrupadosPorMesDeNascimento();
+        //   List<PacientesPorMesDeNascimentoDTO> list = pacienteDAO.listarPacientesAgrupadosPorMesDeNascimento();
 
-        list.forEach(System.out::println);
+        List<PacienteComMaiorEMenorIdadeDTO> list = pacienteDAO.buscarPacienteComMaiorEMenorIdade();
+
+        if(list.isEmpty()){
+            list.forEach(System.out::println);
+        }
 
     }
 
