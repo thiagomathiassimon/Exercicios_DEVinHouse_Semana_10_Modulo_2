@@ -78,7 +78,7 @@ public class PacienteDAO extends DAO<Paciente> {
         return list;
     }
 
-   public List<PacienteESeuMedicoDTO> buscarPacientesEOsMedicosAssociadosAEles(){
+    public List<PacienteESeuMedicoDTO> buscarPacientesEOsMedicosAssociadosAEles(){
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         List<PacienteESeuMedicoDTO> list = null;
         try {
@@ -91,6 +91,24 @@ public class PacienteDAO extends DAO<Paciente> {
             entityManager.close();
         }
         System.out.println(list);
+        return list;
+    }
+
+    public List<Paciente> buscarPacientesPorPagina(int numeroDaPagina){
+        List<Paciente> list = null;
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        final int QUANTIDADE_DE_PACIENTEES_POR_PAGINA = 10;
+        final int PRIMEIRO_REGISTRO_DA_PAGINA = (QUANTIDADE_DE_PACIENTEES_POR_PAGINA * numeroDaPagina) - QUANTIDADE_DE_PACIENTEES_POR_PAGINA;
+        try {
+            list = entityManager.createQuery("FROM Paciente")
+                    .setMaxResults(QUANTIDADE_DE_PACIENTEES_POR_PAGINA)
+                    .setFirstResult(PRIMEIRO_REGISTRO_DA_PAGINA)
+                    .getResultList();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            entityManager.close();
+        }
         return list;
     }
 

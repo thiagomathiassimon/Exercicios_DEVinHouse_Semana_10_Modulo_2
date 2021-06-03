@@ -28,6 +28,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/dao/PacienteDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/main/main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

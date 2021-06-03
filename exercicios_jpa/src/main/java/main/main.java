@@ -83,11 +83,10 @@ public class main {
 
         //   List<PacientesPorMesDeNascimentoDTO> list = pacienteDAO.listarPacientesAgrupadosPorMesDeNascimento();
 
-        List<PacienteESeuMedicoDTO> list = pacienteDAO.buscarPacientesEOsMedicosAssociadosAEles();
+        List<Paciente> list = pacienteDAO.buscarPacientesPorPagina(1);
 
-        if(list.isEmpty()){
             list.forEach(System.out::println);
-        }
+
 
     }
 
