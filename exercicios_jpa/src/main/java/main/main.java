@@ -83,9 +83,9 @@ public class main {
 
         //   List<PacientesPorMesDeNascimentoDTO> list = pacienteDAO.listarPacientesAgrupadosPorMesDeNascimento();
 
-        List<Paciente> list = pacienteDAO.buscarPacientesPorPagina(1);
+        List<Medico> list = medicoDAO.buscarMedicoSemAgendamentos();
 
-            list.forEach(System.out::println);
+        list.forEach(System.out::println);
 
 
     }

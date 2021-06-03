@@ -29,4 +29,19 @@ public class MedicoDAO extends DAO<Medico> {
     public List<Medico> listar(Medico objeto) {
         return null;
     }
+
+    public List<Medico> buscarMedicoSemAgendamentos(){
+        List<Medico> list = null;
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            list = entityManager.createQuery("SELECT new model.Medico(m.codigo, m.nome, m.crm) FROM Medico m \n" +
+                    "\tLEFT JOIN Atendimento a ON m.codigo = a.medico WHERE a.paciente IS null").getResultList();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            entityManager.close();
+        }
+
+        return list;
+    }
 }
