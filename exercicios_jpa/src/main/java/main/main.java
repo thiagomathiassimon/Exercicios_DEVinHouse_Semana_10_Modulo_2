@@ -3,6 +3,7 @@ package main;
 import dao.AtendimentoDAO;
 import dao.MedicoDAO;
 import dao.PacienteDAO;
+import dto.MedicoENumeroDePacientes;
 import dto.PacienteComMaiorEMenorIdadeDTO;
 import dto.PacienteESeuMedicoDTO;
 import model.Atendimento;
@@ -83,7 +84,7 @@ public class main {
 
         //   List<PacientesPorMesDeNascimentoDTO> list = pacienteDAO.listarPacientesAgrupadosPorMesDeNascimento();
 
-        List<Medico> list = medicoDAO.buscarMedicoSemAgendamentos();
+        List<MedicoENumeroDePacientes> list = medicoDAO.buscarMedicosENumeroDePacientes();
 
         list.forEach(System.out::println);
 

@@ -1,5 +1,6 @@
 package dao;
 
+import dto.MedicoENumeroDePacientes;
 import model.Medico;
 
 import javax.persistence.EntityManager;
@@ -42,6 +43,22 @@ public class MedicoDAO extends DAO<Medico> {
             entityManager.close();
         }
 
+        return list;
+    }
+
+        public List<MedicoENumeroDePacientes> buscarMedicosENumeroDePacientes(){
+        List<MedicoENumeroDePacientes> list = null;
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+                  list  = entityManager
+                    .createQuery("SELECT new dto.MedicoENumeroDePacientes( a.medico, COUNT(a.paciente)) FROM Medico m INNER JOIN Atendimento a ON m.codigo = a.medico \n" +
+                    "GROUP BY a.medico")
+                    .getResultList();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            entityManager.close();
+        }
         return list;
     }
 }
