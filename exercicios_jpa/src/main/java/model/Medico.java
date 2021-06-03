@@ -20,6 +20,14 @@ public class Medico {
     @OneToMany(mappedBy = "medico")
     List<Atendimento> atendimentos;
 
+    public Medico(){}
+
+    public Medico(Long codigo, String nome, String crm) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.crm = crm;
+    }
+
     public Long getCodigo() {
         return codigo;
     }
