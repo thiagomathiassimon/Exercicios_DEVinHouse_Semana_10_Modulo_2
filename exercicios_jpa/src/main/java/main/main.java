@@ -14,6 +14,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class main {
 
     public static void main(String[] args) {
@@ -89,12 +90,16 @@ public class main {
 //        MedicoComMaiorNumeroDePacientesDTO medicoComMaiorNumeroDePacientesDTO = medicoDAO.buscarMedicoComOMaiorNumeroDePacientes();
 //
 //        System.out.println(medicoComMaiorNumeroDePacientesDTO);
+//
+//
+//        List<PacienteEMedicoDTO> list = pacienteDAO.buscarPacienteAtivoEMedico();
+//
+//        list.forEach(System.out::println);
+//
 
-
-        List<PacienteEMedicoDTO> list = pacienteDAO.buscarPacienteAtivoEMedico();
+        List<Atendimento> list = atendimentoDAO.buscarAtendimentosDePacientesComMaisDeUMMedico();
 
         list.forEach(System.out::println);
-
 
     }
 

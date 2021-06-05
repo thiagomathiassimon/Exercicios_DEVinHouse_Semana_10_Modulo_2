@@ -1,7 +1,8 @@
 package dao;
 
 import model.Atendimento;
-import model.Medico;
+import org.springframework.beans.factory.annotation.Autowired;
+import repository.AtendimentoRepository;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -9,6 +10,10 @@ import java.util.List;
 import static model.JPAUtil.entityManagerFactory;
 
 public class AtendimentoDAO extends DAO<Atendimento>{
+
+    @Autowired
+    AtendimentoRepository atendimentoRepository;
+
     @Override
     public void deletar(Atendimento objeto) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -28,5 +33,9 @@ public class AtendimentoDAO extends DAO<Atendimento>{
     @Override
     public List<Atendimento> listar(Atendimento objeto) {
         return null;
+    }
+
+    public List<Atendimento> buscarAtendimentosDePacientesComMaisDeUMMedico(){
+        return atendimentoRepository.buscarAtendimentosDePacientesComMaisDeUMMedico();
     }
 }
