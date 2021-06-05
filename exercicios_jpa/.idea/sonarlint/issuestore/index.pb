@@ -9,8 +9,6 @@ P
  src/main/java/model/JPAUtil.java,e\9\e98db4bba9f103b4ec9a96b5da444ce0509125bf
 K
 src/main/java/dao/IDao.java,7\d\7dfde54a3b20093df62489891e259613d82b406f
-\
-,src/main/java/dto/PacienteESeuMedicoDTO.java,8\7\871325c8f8a0ef542f080ec4c4660a662ecfabf1
 e
 5src/main/java/dto/PacienteComMaiorEMenorIdadeDTO.java,4\3\43031baf1b88c98c6caf012a61e9cd37066810bf
 Q
