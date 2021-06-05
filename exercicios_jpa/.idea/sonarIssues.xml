@@ -53,6 +53,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/dao/AtendimentoDAO.java">
           <value>
             <set />
@@ -74,6 +79,56 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/main/main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/repository/AtendimentoRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/DemoApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/controller/AtendimentoController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/model/Atendimento.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/model/Paciente.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/repository/AtendimentoRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/service/AtendimentoService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../projeto-final-modulo-2/devinhouse-projeto-final-modulo-2/sql/src/main/resources/application.properties">
           <value>
             <set />
           </value>
