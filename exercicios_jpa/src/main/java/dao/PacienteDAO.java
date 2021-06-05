@@ -1,8 +1,10 @@
 package dao;
 
 import dto.PacienteComMaiorEMenorIdadeDTO;
+import dto.PacienteEMedicoDTO;
 import dto.PacienteESeuMedicoDTO;
 import dto.PacientesPorMesDeNascimentoDTO;
+import model.Atendimento;
 import model.Paciente;
 
 import javax.persistence.EntityManager;
@@ -109,6 +111,24 @@ public class PacienteDAO extends DAO<Paciente> {
         }finally {
             entityManager.close();
         }
+        return list;
+    }
+
+    public List<PacienteEMedicoDTO> buscarPacienteAtivoEMedico(){
+        List<PacienteEMedicoDTO> list = null;
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+
+            list = entityManager.createQuery("SELECT new dto.PacienteEMedicoDTO(p.nome, m.nome) FROM \n" +
+                    "\tPaciente p INNER JOIN Atendimento a ON p.codigo = a.paciente INNER JOIN Medico m \n" +
+                    "\tON m.codigo = a.medico WHERE a.situacao LIKE '%marcado'").getResultList();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            entityManager.close();
+        }
+
         return list;
     }
 
