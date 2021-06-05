@@ -103,6 +103,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/controller/MedicoController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/model/Atendimento.java">
           <value>
             <set />
@@ -118,7 +123,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/repository/MedicoRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/service/AtendimentoService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sql/src/main/java/br/com/devinhouse/sql/service/MedicoService.java">
           <value>
             <set />
           </value>
