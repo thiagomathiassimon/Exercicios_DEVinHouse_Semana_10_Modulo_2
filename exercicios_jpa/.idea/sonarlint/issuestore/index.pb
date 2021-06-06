@@ -11,3 +11,27 @@ e
 5src/main/java/dto/PacienteComMaiorEMenorIdadeDTO.java,4\3\43031baf1b88c98c6caf012a61e9cd37066810bf
 Q
 !src/main/java/model/Paciente.java,e\6\e6baa08f22578c7d54468b33c77b19c54a696916
+_
+/src/main/java/dto/MedicoENumeroDePacientes.java,d\a\da59d57347a947d232a69d6e408e3aee4000be4f
+J
+src/main/java/dao/DAO.java,8\5\854afe0992586767882304145dc1841dd1eecb4e
+P
+ src/main/java/dao/MedicoDAO.java,a\7\a7b5b1c3d8c6ec507a985e8367698fff3c05fd8b
+i
+9src/main/java/dto/MedicoComMaiorNumeroDePacientesDTO.java,6\5\65582080418c24c793013c2f20ee42b99e22de65
+Y
+)src/main/java/dto/PacienteEMedicoDTO.java,2\6\26165e0aeefdc04195b47e9fd974eb8d96ae9aee
+O
+src/main/java/model/Medico.java,b\1\b1134726e7df6816d4ac04dd6bdbc4e93bf9e1d7
+R
+"src/main/java/dao/PacienteDAO.java,a\f\af59145e35cd9cd949857e159b62266b321878ce
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+\
+,src/main/java/dto/PacienteESeuMedicoDTO.java,8\7\871325c8f8a0ef542f080ec4c4660a662ecfabf1
+U
+%src/main/java/dao/AtendimentoDAO.java,0\1\015457220709d656bd38346739eebedc2e77ce59
+L
+src/main/java/main/main.java,1\1\11df2f4681d63dcc759cd116e8ffe24faebfa0c8
+c
+3src/main/java/repository/AtendimentoRepository.java,8\7\87688ca2492080ab0bc94fb6f1becde359cb3f18

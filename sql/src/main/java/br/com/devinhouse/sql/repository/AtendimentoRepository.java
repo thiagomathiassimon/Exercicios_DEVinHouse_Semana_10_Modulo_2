@@ -3,9 +3,11 @@ package br.com.devinhouse.sql.repository;
 import br.com.devinhouse.sql.model.Atendimento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> {
 
     @Query(value = "\n" +
@@ -16,4 +18,6 @@ public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> 
             "\tWHERE result.count > 1", nativeQuery = true)
     List<Atendimento> buscarAtendimentosDePacientesComMaisDeUMMedico();
 
+    @Query(value = "SELECT * FROM Atendimento a WHERE a.medico = ?1", nativeQuery = true)
+    List<Atendimento> buscartendimentoPeloIdDoMedico(Long idMedico);
 }

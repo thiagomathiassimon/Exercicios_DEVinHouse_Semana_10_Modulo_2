@@ -1,0 +1,11 @@
+
+D
+java:S6212"/Declare this local variable with "var" instead.(ÇÌØ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ó©Õ
+D
+java:S6212"/Declare this local variable with "var" instead.(ÇÌØ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ó©Õ
+k
+java:S3038*"P"deletar" is defined in the "IDao" interface and can be removed from this class.(òº‘ïûÿÿÿÿ
+j
+java:S3038-"O"listar" is defined in the "IDao" interface and can be removed from this class.(òº‘ïûÿÿÿÿ

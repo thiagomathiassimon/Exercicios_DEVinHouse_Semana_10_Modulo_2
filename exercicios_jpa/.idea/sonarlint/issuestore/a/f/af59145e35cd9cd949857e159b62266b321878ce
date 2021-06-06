@@ -1,0 +1,29 @@
+
+K
+java:S1128".Remove this unused import 'model.Atendimento'.(É¶¬º8Âçèá/
+D
+java:S6212"/Declare this local variable with "var" instead.(ÇÌØ
+A
+java:S1168#"+Return an empty collection instead of null.(¥¹ï
+D
+java:S6212'"/Declare this local variable with "var" instead.(ÇÌØ
+D
+java:S62126"/Declare this local variable with "var" instead.(ÇÌØ
+D
+java:S6212D"/Declare this local variable with "var" instead.(ÇÌØ
+M
+java:S6126G"2Replace this String concatenation with Text block.(úÏö¬ÿÿÿÿÿ
+S	java:S106O"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+D
+java:S6212T"/Declare this local variable with "var" instead.(ÇÌØ
+G
+java:S6126W"2Replace this String concatenation with Text block.(½“ËY
+S	java:S106_"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+D
+java:S6212e"/Declare this local variable with "var" instead.(ÇÌØ
+J
+java:S6212f"/Declare this local variable with "var" instead.(˜®¾úúÿÿÿÿ
+K
+java:S6212w"/Declare this local variable with "var" instead.(ÇÌØ8†Ûá/
+T
+java:S6126z"2Replace this String concatenation with Text block.(°§Â–üÿÿÿÿ8Âùïá/
