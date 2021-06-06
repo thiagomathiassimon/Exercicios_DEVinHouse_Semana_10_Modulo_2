@@ -17,4 +17,7 @@ public class AtendimentoService {
         return repository.buscarAtendimentosDePacientesComMaisDeUMMedico();
     }
 
+    public List<Atendimento> buscarAtendimentosComMedicoEPaciente() {
+        return repository.buscarAtendimentosComMedicoEPaciente();
+    }
 }

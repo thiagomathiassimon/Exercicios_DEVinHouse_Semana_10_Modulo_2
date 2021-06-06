@@ -20,4 +20,7 @@ public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> 
 
     @Query(value = "SELECT * FROM Atendimento a WHERE a.medico = ?1", nativeQuery = true)
     List<Atendimento> buscartendimentoPeloIdDoMedico(Long idMedico);
+
+    @Query(value = "SELECT * FROM atendimento", nativeQuery = true)
+    List<Atendimento> buscarAtendimentosComMedicoEPaciente();
 }

@@ -21,4 +21,9 @@ public class AtendimentoController {
         return service.buscarAtendimentosDePacientesComMaisDeUMMedico();
     }
 
+    @GetMapping(value = "/total")
+    public List<Atendimento> buscarAtendimentosComMedicoEPaciente(){
+        return service.buscarAtendimentosComMedicoEPaciente();
+    }
+
 }
