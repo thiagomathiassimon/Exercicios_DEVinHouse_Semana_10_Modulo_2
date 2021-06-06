@@ -1,0 +1,43 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡
+b
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(Çµí‘
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+Z
+java:S1854'"?Remove this useless assignment to local variable "pacienteDAO".(¡ð¶´úÿÿÿÿ
+S
+java:S1854"=Remove this useless assignment to local variable "medicoDAO".(ºûþ¾
+E
+java:S6212"/Declare this local variable with "var" instead.(ºûþ¾
+J
+java:S6212"/Declare this local variable with "var" instead.(ÓÅ¾²ùÿÿÿÿ
+J
+java:S6212'"/Declare this local variable with "var" instead.(¡ð¶´úÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(ÿ˜‰@
+Q	java:S125!"<This block of commented-out lines of code should be removed.(üìß
+Q	java:S125#"<This block of commented-out lines of code should be removed.(¯ÈŽ 
+D
+java:S6212("/Declare this local variable with "var" instead.(µ´Ñn
+V	java:S125."<This block of commented-out lines of code should be removed.(î§˜âùÿÿÿÿ
+V	java:S1253"<This block of commented-out lines of code should be removed.(üæ§ýÿÿÿÿ
+Q	java:S1255"<This block of commented-out lines of code should be removed.(Õüý•
+E
+java:S6212?"/Declare this local variable with "var" instead.(“„·þ
+Q	java:S125;"<This block of commented-out lines of code should be removed.(üìß
+V	java:S125="<This block of commented-out lines of code should be removed.(¡À’Íùÿÿÿÿ
+E
+java:S6212@"/Declare this local variable with "var" instead.(üãÂú
+Q	java:S125J"<This block of commented-out lines of code should be removed.(ü ñå
+Q	java:S125L"<This block of commented-out lines of code should be removed.(™ñß‘
+V	java:S125N"<This block of commented-out lines of code should be removed.(¸±¿•ýÿÿÿÿ
+V	java:S125P"<This block of commented-out lines of code should be removed.(Ëˆª¾ùÿÿÿÿ
+Q	java:S125R"<This block of commented-out lines of code should be removed.(­Í½Ä
+V	java:S125T"<This block of commented-out lines of code should be removed.(û©ËÂýÿÿÿÿ
+V	java:S125V"<This block of commented-out lines of code should be removed.(Ê´úÄùÿÿÿÿ
+Q	java:S125Z"<This block of commented-out lines of code should be removed.(Åœç¸
+S	java:S106f"9Replace this use of System.out or System.err by a logger.(­¸¤Êúÿÿÿÿ
+D
+java:S1481".Remove this unused "medicoDAO" local variable.(ºûþ¾
+K
+java:S1481'"0Remove this unused "pacienteDAO" local variable.(¡ð¶´úÿÿÿÿ

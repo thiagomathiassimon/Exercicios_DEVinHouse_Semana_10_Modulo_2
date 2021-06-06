@@ -1,5 +1,6 @@
 package br.com.devinhouse.sql.controller;
 
+import br.com.devinhouse.sql.dto.MedicoEPacienteDTO;
 import br.com.devinhouse.sql.model.Medico;
 import br.com.devinhouse.sql.service.MedicoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class MedicoController {
     @GetMapping
     public List<Medico> buscarMedicosEmOrdemAlfabetica(){
         return service.buscarMedicosEmOrdemAlfabetica();
+    }
+
+    @GetMapping(value = "/paciente")
+    public List<MedicoEPacienteDTO> buscarMedicoEPacienteDTO(){
+        return service.buscarMedicoEPaceinte();
     }
 
 }
